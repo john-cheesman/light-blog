@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8" />
+
+	<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+{% if meta.description %}
+	<meta name="description" content="{{ meta.description }}">
+{% endif %}{% if meta.robots %}
+	<meta name="robots" content="{{ meta.robots }}">
+{% endif %}
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" />
+	<link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
+
+	<script src="{{ theme_url }}/scripts/modernizr-2.6.1.min.js"></script>
+</head>
+<body>
+
+	<header class="header-main">
+            {% if is_front_page %}
+			<h1><a href="{{ base_url }}">{{ site_title }}</a></h1>
+            {% else %}
+            <p><a href="{{ base_url }}">{{ site_title }}</a></p>
+            {% endif %}
+			<ul class="nav">
+				{% for page in pages %}
+				<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+				{% endfor %}
+			</ul>
+	</header>
+
+	<section class="content-main">
+		{% if is_front_page %} <!-- Front page lists all blog posts -->
+
+        <div id="posts">
+        {% for page in pages %}
+            {% if page.date %} <!-- Note we check for Date field (posts) here -->
+            <div class="post">
+                <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                <p class="meta">{{ page.date_formatted }}</p>
+                <p class="excerpt">{{ page.excerpt }}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+
+        {% else %} <!-- Single page shows individual blog post -->
+
+        <article class="post">
+            {% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
+            <p class="meta">{{ meta.date_formatted }}</p>
+            {{ content }}
+        </article>
+
+        {% endif %}
+	</section>
+
+	<footer class="footer-main">
+		Powered by <a href="http://pico.dev7studios.com">Pico</a> and Light Blog
+	</footer>
+
+</body>
+</html>
