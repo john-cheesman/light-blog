@@ -1,0 +1,50 @@
+.inline-block {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.cf {
+    &:before, &:after {
+        content:"";
+        display:table
+    } /* For modern browsers */
+    &:after {
+        clear:both
+    }
+    
+    zoom:1 /* For IE 6/7 (trigger hasLayout) */
+}
+
+.container {
+    padding: 0 10px;
+}
+
+.transition(@el: all,@sec: 0.25s,@el1,@sec1,@el2,@sec2) {
+    transition: @el @sec @el1 @sec1 @el2 @sec2;
+    -webkit-transition: @el @sec @el1 @sec1 @el2 @sec2;
+}
+
+.fontSize(@px: 14) {
+    font-size: (@px/16em);
+}
+
+.size(@w,@h) {
+    width: @w;
+    height: @h;
+}
+
+.square(@s) {
+    height: @s;
+    width: @s;
+}
+
+.opacity(@percent) {
+    opacity: @percent/100;
+    filter: Alpha(opacity=@percent);
+}
+
+.border-box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
