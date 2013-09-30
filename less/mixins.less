@@ -12,7 +12,7 @@
     &:after {
         clear:both
     }
-    
+
     zoom:1 /* For IE 6/7 (trigger hasLayout) */
 }
 
@@ -27,6 +27,10 @@
 
 .fontSize(@px: 14) {
     font-size: (@px/16em);
+}
+
+.lineHeight(@px: 24, @sz: 14) {
+    line-height: (@px/@sz)*1em;
 }
 
 .size(@w,@h) {

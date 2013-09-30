@@ -1,1 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea {
+    font-family: @bodyFont;
+    font-size: 100%;
+    color: @textColor;
+}
+
+.huge {
+    .fontSize(60);
+    .lineHeight(72,60);
+    margin-bottom: (24/60em);
+}
+
+.big, h1 {
+    .fontSize(36);
+    .lineHeight(48,36);
+    margin-bottom: (12/36em);
+}
+
+.medium, h2 {
+    .fontSize(24);
+    .lineHeight(36,24);
+    margin-bottom: (12/24em);
+}
+
+.base, h3 {
+    .fontSize(14);
+    .lineHeight(24,14);
+    margin-bottom: (12/14em);
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+p, ul, pre, table {
+    .base;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-family: @headerFont;
+}
+
+code {
+    font-family: @monoFont;
+}
 
