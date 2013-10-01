@@ -14,6 +14,12 @@ img {
 a {
     color: @linkColor;
     text-decoration: none;
+    transition: color 0.25s;
+    -webkit-transition: color 0.25s;
+
+    &:hover {
+        color: @linkColorHover;
+    }
 }
 
 h1 a {
@@ -25,9 +31,14 @@ h1 a {
     top: -24px;
 }
 
+.branding {
+    .medium;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 .content-main {
     article {
-        padding: 10px;
 
         h1 {
         }
@@ -42,7 +53,7 @@ h1 a {
 
 }
 
-// Touch Specific Styles
+// Touch Specific Styles (requires Modernizr)
 
 .touch {
 }
