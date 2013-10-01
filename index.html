@@ -38,27 +38,35 @@
     {% for page in pages %}
 	{% if page.date %} <!-- Note we check for Date field (posts) here -->
 	<article class="post">
-	    <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-	    <p class="meta">{{ page.date_formatted }} // by {{ page.author }}</p>
+	    <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+	    <ul class="meta">
+		<li><time datetime="{{ page.date }}">{{ page.date_formatted }}</time></li>
+		<li>by {{ page.author }}</li>
+	    </ul>
 	    <p class="excerpt">{{ page.excerpt }}</p>
 	</article>
 	{% endif %}
     {% endfor %}
 
     {% else %} <!-- Single page shows individual blog post -->
-
-    <article class="post">
-	{% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
-	<p class="meta">{{ meta.date_formatted }} // by {{ meta.author }}</p>
-	{{ content }}
-    </article>
-
+	<article class="post">
+	    {% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
+	    <ul class="meta">
+		<li><time datetime="{{ meta.date }}">{{ meta.date_formatted }}</time></li>
+		<li>by {{ meta.author }}</li>
+	    </ul>
+	    {{ content }}
+	</article>
     {% endif %}
     </section> <!-- close .content-main -->
 
     <footer class="footer-main">
-	Powered by <a href="http://pico.dev7studios.com">Pico</a> and Light Blog
+	<p>Powered by <a href="http://pico.dev7studios.com">Pico</a> and Light Blog</p>
     </footer> <!-- close .footer-main -->
+
+    <!-- Scripts -->
+    <script src="{{ theme_url }}/js/vendor/jquery-1.10.2.js"></script>
+    <script src="{{ theme_url }}/js/main.js"></script>
 
 </body>
 </html>

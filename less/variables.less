@@ -1,40 +1,32 @@
 // COLOURS
 
-// Units
-
-@line: 24;
-@font-size: 16;
-@em: @font-size*1em;
-
 // Greyscale
 
-@black:         #000000;
-@greyMid:       #333333;
-@grey:          #42423f;
-@white:         #ffffff;
+@black:             #000000;
+@greyMid:           #333333;
+@grey:              #707070;
+@white:             #ffffff;
 
 // Accents
 
-@blue:          #0E5066;
+@blue:              #0E5066;
 
 // Defaults
 
-@textColor:     @greyMid;
-@linkColor:     @blue;
-@linkColorHover:darken(@linkColor, 10%);
-@bg:            @white;
+@textColor:         @grey;
+@linkColor:         @blue;
+@linkColorHover:    lighten(@linkColor, 10%);
+@linkColorActive:   lighten(@linkColor, 10%);
+@bg:                @white;
+
 
 // TYPOGRAPHY
 
 // Fonts
 
-@bodyFont:      @newsCycle;
-@headerFont:    @novecento;
-@monoFont:      Monaco, Consolas, 'Courier New', monospace;
+@bodyFont:          @newsCycle;
+@headerFont:        @novecento;
+@monoFont:          Monaco, Consolas, 'Courier New', monospace;
 
-@novecento:     'Novecento Wide', Helvetica, Arial, sans-serif;
-@newsCycle:     'News Cycle', Helvetica, Arial, sans-serif;
-
-// Units
-
-@base: 1.5em;
+@novecento:         'Novecento Wide', Helvetica, Arial, sans-serif;
+@newsCycle:         'News Cycle', Helvetica, Arial, sans-serif;

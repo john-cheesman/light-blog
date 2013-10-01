@@ -2,7 +2,7 @@
 body {
     width: (300/320)*100%;
     margin: 0 auto;
-    background: @bg;
+    //background: url(../img/base12px.gif) @bg;
     color: @textColor;
 }
 
@@ -22,10 +22,6 @@ a {
     }
 }
 
-h1 a {
-    color: @textColor;
-}
-
 #access {
     position: absolute;
     top: -24px;
@@ -35,6 +31,20 @@ h1 a {
     .medium;
     text-transform: uppercase;
     font-weight: 600;
+    font-family: @headerFont;
+
+    a {
+        color: @textColor;
+    }
+}
+
+.header-main {
+    &.fixed {
+        position: fixed;
+        top: 0;
+        background-color: rgba(255,255,255,0.9);
+        width: 100%;
+    }
 }
 
 .content-main {

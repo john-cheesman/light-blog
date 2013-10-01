@@ -71,24 +71,24 @@ select,
 textarea {
   font-family: 'News Cycle', Helvetica, Arial, sans-serif;
   font-size: 100%;
-  color: #333333;
+  color: #707070;
 }
 .huge {
   font-size: 3.75em;
   line-height: 1.2em;
-  margin-bottom: 0.4em;
+  margin-bottom: 0;
 }
 .big,
 h1 {
   font-size: 2.25em;
   line-height: 1.3333333333333333em;
-  margin-bottom: 0.3333333333333333em;
+  margin-bottom: 0;
 }
 .medium,
 h2 {
   font-size: 1.5em;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 .base,
 h3 {
@@ -126,8 +126,7 @@ ol {
 body {
   width: 93.75%;
   margin: 0 auto;
-  background: #ffffff;
-  color: #333333;
+  color: #707070;
 }
 img {
   max-width: 100%;
@@ -140,10 +139,7 @@ a {
   -webkit-transition: color 0.25s;
 }
 a:hover {
-  color: #082d39;
-}
-h1 a {
-  color: #333333;
+  color: #147393;
 }
 #access {
   position: absolute;
@@ -152,9 +148,19 @@ h1 a {
 .branding {
   font-size: 1.5em;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: 'Novecento Wide', Helvetica, Arial, sans-serif;
+}
+.branding a {
+  color: #707070;
+}
+.header-main.fixed {
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
 }
 @media only screen and (min-width: 480px) {
   
@@ -163,17 +169,17 @@ h1 a {
   h1 {
     font-size: 3.75em;
     line-height: 1.2em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0;
   }
   h2,
   .branding {
     font-size: 2.25em;
     line-height: 1.3333333333333333em;
-    margin-bottom: 0.3333333333333333em;
+    margin-bottom: 0;
   }
   h3 {
     font-size: 1.5em;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
   }
 }
