@@ -133,13 +133,20 @@ img {
   display: block;
 }
 a {
-  color: #0e5066;
   text-decoration: none;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
 }
-a:hover {
-  color: #147393;
+a:link {
+  color: #397b91;
+}
+a:active,
+a:visited {
+  color: #2b5c6c;
+}
+a:hover,
+a:focus {
+  color: #479ab6;
 }
 #access {
   position: absolute;

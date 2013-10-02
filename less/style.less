@@ -12,12 +12,19 @@ img {
 }
 
 a {
-    color: @linkColor;
     text-decoration: none;
     transition: color 0.25s;
     -webkit-transition: color 0.25s;
 
-    &:hover {
+    &:link {
+        color: @linkColor;
+    }
+
+    &:active, &:visited {
+        color: @linkColorActive;
+    }
+
+    &:hover, &:focus {
         color: @linkColorHover;
     }
 }
