@@ -1,4 +1,4 @@
-light-blog
+Light Blog
 ==========
 
-A simple responsive blog theme for Pico
+A simple responsive blog theme for Pico, currently under development
