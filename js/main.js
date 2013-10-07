@@ -16,4 +16,12 @@ $(document).ready(function() {
             $('body').css('margin-top', 0);
         }
     })
+
+    /* Reveal menu */
+    $('.menu-link').click(function(e) {
+        var menu = $('.nav-main');
+
+        menu.slideToggle();
+        e.preventDefault();
+    })
 })

@@ -19,21 +19,24 @@
 <body>
 
     <header class="header-main">
-		{% if is_front_page %}
-		<h1 class="branding"><a href="{{ base_url }}">{{ site_title }}</a></h1>
-		{% else %}
-		<p class="branding"><a href="{{ base_url }}">{{ site_title }}</a></p>
-		{% endif %}
-		<nav class="nav-main">
-			<ul>
-				{% for page in pages %}
-				{% if not page.date %}
-				<li><a href="{{ page.url }}">{{ page.title }}</a></li>
-				{% endif %}
-				{% endfor %}
-			</ul>
-		</nav>
-    </header> <!-- close.header-main -->
+	<div class="header-inner">
+	    {% if is_front_page %}
+	    <h1 class="branding"><a href="{{ base_url }}">{{ site_title }}</a></h1>
+	    {% else %}
+	    <p class="branding"><a href="{{ base_url }}">{{ site_title }}</a></p>
+	    {% endif %}
+	    <a href="#" class="menu-link">menu</a>
+	    <nav class="nav-main">
+		    <ul>
+			    {% for page in pages %}
+			    {% if not page.date %}
+			    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+			    {% endif %}
+			    {% endfor %}
+		    </ul>
+	    </nav>
+	</div> <!-- close .header-inner -->
+    </header> <!-- close .header-main -->
 
     <section class="content-main">
     {% if is_front_page %} <!-- Front page lists all blog posts -->

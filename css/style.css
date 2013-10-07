@@ -124,8 +124,7 @@ ol {
 }
 /* DEFAULT MOBILE STYLE */
 body {
-  width: 93.75%;
-  margin: 0 auto;
+  background-color: #ffffff;
   color: #707070;
 }
 img {
@@ -163,15 +162,30 @@ a:focus {
 .branding a {
   color: #707070;
 }
+.header-main {
+  position: relative;
+  background-color: rgba(112, 112, 112, 0.9);
+  color: #ffffff;
+}
+.header-main a {
+  color: #ffffff;
+}
 .header-main.fixed {
   position: fixed;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.18);
+}
+.header-main .header-inner {
+  width: 93.75%;
+  margin: 0 auto;
 }
 .nav-main ul {
   list-style: none;
+}
+.menu-link {
+  position: absolute;
+  top: 0;
+  right: 6.25%;
 }
 .post-meta {
   list-style: none;
@@ -189,7 +203,13 @@ a:focus {
   list-style: none;
 }
 .content-main {
+  width: 93.75%;
+  margin: 0 0 0 3.125%;
   max-width: 600px;
+}
+.footer-main {
+  width: 93.75%;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 480px) {
   

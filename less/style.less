@@ -1,8 +1,6 @@
 /* DEFAULT MOBILE STYLE */
 body {
-    width: (300/320)*100%;
-    margin: 0 auto;
-    //background: url(../img/base12px.gif) @bg;
+    background-color: @bg;
     color: @textColor;
 }
 
@@ -46,12 +44,24 @@ a {
 }
 
 .header-main {
+    position: relative;
+    background-color: rgba(112,112,112,0.9);
+    color: @bg;
+
+    a {
+        color: @bg;
+    }
+
     &.fixed {
         position: fixed;
         top: 0;
-        background-color: rgba(255,255,255,0.9);
         width: 100%;
-        box-shadow: 4px 4px 4px rgba(0,0,0,0.18);
+        //box-shadow: 4px 4px 4px rgba(0,0,0,0.18);
+    }
+
+    .header-inner {
+        width: (300/320)*100%;
+        margin: 0 auto;
     }
 }
 
@@ -59,6 +69,12 @@ a {
     ul {
         list-style: none;
     }
+}
+
+.menu-link {
+    position: absolute;
+    top: 0;
+    right: (20/320)*100%;
 }
 
 .post-meta {
@@ -82,6 +98,8 @@ a {
 }
 
 .content-main {
+    width: (300/320)*100%;
+    margin: 0 0 0 (10/320)*100%;
     max-width: 600px;
 
     article {
@@ -91,12 +109,9 @@ a {
     }
 }
 
-.content-sub {
-
-}
-
 .footer-main {
-
+    width: (300/320)*100%;
+    margin: 0 auto;
 }
 
 // Touch Specific Styles (requires Modernizr)
