@@ -55,6 +55,32 @@ a {
     }
 }
 
+.nav-main {
+    ul {
+        list-style: none;
+    }
+}
+
+.post-meta {
+    list-style: none;
+
+    li {
+        display: inline-block;
+
+        &:after {
+            content: ' \2022';
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+    }
+}
+
+.post-single-meta {
+    list-style: none;
+}
+
 .content-main {
     max-width: 600px;
 

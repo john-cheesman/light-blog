@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+    <title>{% if meta.title %}{{ meta.title }} &bull; {% endif %}{{ site_title }}</title>
 {% if meta.description %}
     <meta name="description" content="{{ meta.description }}">
 {% endif %}{% if meta.robots %}
@@ -24,10 +24,12 @@
 		{% else %}
 		<p class="branding"><a href="{{ base_url }}">{{ site_title }}</a></p>
 		{% endif %}
-		<nav class="nav">
+		<nav class="nav-main">
 			<ul>
 				{% for page in pages %}
+				{% if not page.date %}
 				<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+				{% endif %}
 				{% endfor %}
 			</ul>
 		</nav>
@@ -40,7 +42,7 @@
 	{% if page.date %} <!-- Note we check for Date field (posts) here -->
 	<article class="post">
 	    <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-	    <ul class="meta">
+	    <ul class="post-meta">
 		<li><time datetime="{{ page.date }}">{{ page.date_formatted }}</time></li>
 		<li>by {{ page.author }}</li>
 	    </ul>
@@ -50,14 +52,21 @@
     {% endfor %}
 
     {% else %} <!-- Single page shows individual blog post -->
-	<article class="post">
+	{% if meta.date %}
+	<article class="post-single">
 	    {% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
-	    <ul class="meta">
+	    <ul class="post-single-meta">
 		<li><time datetime="{{ meta.date }}">{{ meta.date_formatted }}</time></li>
 		<li>by {{ meta.author }}</li>
 	    </ul>
 	    {{ content }}
 	</article>
+	{% else %}
+	<article class="page">
+		{% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
+		{{ content }}
+	</article>
+	{% endif %}
     {% endif %}
     </section> <!-- close .content-main -->
 
