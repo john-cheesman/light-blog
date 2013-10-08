@@ -1,3 +1,10 @@
+/* HIDDEN ON LOAD */
+.js {
+    .nav-main {
+        display: none;
+    }
+}
+
 /* DEFAULT MOBILE STYLE */
 body {
     background-color: @bg;
@@ -68,6 +75,7 @@ a {
 .nav-main {
     ul {
         list-style: none;
+        margin: 0;
     }
 }
 
@@ -77,8 +85,10 @@ a {
     right: (20/320)*100%;
 }
 
-.post-meta {
+.post-meta, .post-single-meta {
     list-style: none;
+    margin: 0;
+    font-weight: 600;
 
     li {
         display: inline-block;
@@ -94,7 +104,16 @@ a {
 }
 
 .post-single-meta {
-    list-style: none;
+    border-bottom: solid 1px @greyLight;
+    border-top: solid 1px @greyLight;
+    margin-bottom: (10/14em);
+}
+
+.excerpt {
+    border-bottom: solid 1px @greyLight;
+    border-top: solid 1px @greyLight;
+    margin-bottom: (22/14em);
+    padding: (12/14em) 0;
 }
 
 .content-main {

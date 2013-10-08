@@ -1,4 +1,5 @@
 /* Main Light Blog functions */
+$('html').attr('class', 'js');
 
 $(document).ready(function() {
 
@@ -8,11 +9,11 @@ $(document).ready(function() {
             var offset = $('.header-main').height();
             console.log(offset);
 
-            $('.header-main').css('max-height', offset + 'px').addClass('fixed');
+            $('.header-main').addClass('fixed');
             $('body').css('margin-top', offset + 'px');
         }
         else {
-            $('.header-main').css('max-height', 'none').removeClass('fixed');
+            $('.header-main').removeClass('fixed');
             $('body').css('margin-top', 0);
         }
     })
