@@ -71,7 +71,7 @@ select,
 textarea {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 100%;
-  color: #707070;
+  color: #545454;
 }
 .huge {
   font-size: 3.75em;
@@ -129,7 +129,7 @@ ol {
 /* DEFAULT MOBILE STYLE */
 body {
   background-color: #ffffff;
-  color: #707070;
+  color: #545454;
 }
 img {
   max-width: 100%;
@@ -164,11 +164,11 @@ a:focus {
   font-family: 'Novecento Wide', Helvetica, Arial, sans-serif;
 }
 .branding a {
-  color: #707070;
+  color: #545454;
 }
 .header-main {
   position: relative;
-  background-color: rgba(112, 112, 112, 0.9);
+  background-color: #3b3b3b;
   color: #ffffff;
 }
 .header-main a {
