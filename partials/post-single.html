@@ -1,0 +1,8 @@
+<article class="post-single">
+    {% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
+    <ul class="post-single-meta">
+    <li><time datetime="{{ meta.date }}">{{ meta.date_formatted }}</time></li>
+    <li>by {{ meta.author }}</li>
+    </ul>
+    {{ content }}
+</article>

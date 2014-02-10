@@ -18,68 +18,28 @@
 </head>
 <body>
 
-    <header class="header-main">
-	<div class="header-inner">
-	    {% if is_front_page %}
-	    <h1 class="branding"><a href="{{ base_url }}">{{ site_title }}</a></h1>
-	    {% else %}
-	    <p class="branding"><a href="{{ base_url }}">{{ site_title }}</a></p>
-	    {% endif %}
-	    <a href="#" class="menu-link">menu</a>
-	    <nav class="nav-main">
-		    <ul>
-			    {% for page in pages %}
-			    {% if not page.date %}
-			    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-			    {% endif %}
-			    {% endfor %}
-		    </ul>
-	    </nav>
-	</div> <!-- close .header-inner -->
-    </header> <!-- close .header-main -->
+    {% include 'partials/header.html' %}
 
     <section class="content-main">
     {% if is_front_page %} <!-- Front page lists all blog posts -->
 
-    {% for page in pages %}
-	{% if page.date %} <!-- Note we check for Date field (posts) here -->
-	<article class="post">
-	    <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-	    <ul class="post-meta">
-		<li><time datetime="{{ page.date }}">{{ page.date_formatted }}</time></li>
-		<li>by {{ page.author }}</li>
-	    </ul>
-	    <p class="excerpt">{{ page.excerpt }}</p>
-	</article>
-	{% endif %}
-    {% endfor %}
+        {% include 'partials/post-list.html' %}
 
     {% else %} <!-- Single page shows individual blog post -->
 	{% if meta.date %}
-	<article class="post-single">
-	    {% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
-	    <ul class="post-single-meta">
-		<li><time datetime="{{ meta.date }}">{{ meta.date_formatted }}</time></li>
-		<li>by {{ meta.author }}</li>
-	    </ul>
-	    {{ content }}
-	</article>
+
+        {% include 'partials/post-single.html '%}
+
 	{% else %}
-	<article class="page">
-		{% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
-		{{ content }}
+
+        {% include 'partials/page-single.html' %}
+
 	</article>
 	{% endif %}
     {% endif %}
     </section> <!-- close .content-main -->
 
-    <footer class="footer-main">
-	<p>Powered by <a href="http://pico.dev7studios.com">Pico</a> and Light Blog</p>
-    </footer> <!-- close .footer-main -->
-
-    <!-- Scripts -->
-    <script src="{{ theme_url }}/js/vendor/jquery-1.10.2.js"></script>
-    <script src="{{ theme_url }}/js/main.js"></script>
+    {% include 'partials/footer.html' %}
 
 </body>
 </html>
