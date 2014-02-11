@@ -1,0 +1,64 @@
+// Variables
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+// Fonts
+
+$header__font:                         'Oswald', sans-serif;
+$base__font:                           'Gentium Basic', sans-serif;
+
+// Dimensions
+
+$base__spacing:                         2.4rem;
+$base__spacing--half:                   $base__spacing/2;
+
+// Font sizes
+
+$baseline__font-size--alpha:            4.0rem;
+$baseline__font-size--beta:             3.0rem;
+$baseline__font-size--gamma:            2.0rem;
+$baseline__font-size--delta:            1.6rem;
+
+// Line heights
+
+$baseline__line-height--alpha:          4.8rem;
+$baseline__line-height--beta:           3.6rem;
+$baseline__line-height--gamma:          2.4rem;
+$baseline__line-height--delta:          2.4rem;
+
+// Colours
+
+$colour__ground:                        #fff;
+$colour__copy:                          #333;
+$colour__benefits:                      #175ecc;
+$colour__explanation:                   #5e7599;
+$colour__summary:                       #37efff;
+$colour__participation:                 #ff9B77;
+$colour__preamble:                      #cc2e17;
+$colour__requirements:                  #175ecc;
+
+// Base styles
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $baseline__font-size--delta;
+    font-family: $base__font;
+    color: $colour__copy;
+}
+
+h1, h2, h3, h4 {
+    font-family: $header__font;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}

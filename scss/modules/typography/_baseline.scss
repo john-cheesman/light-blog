@@ -1,0 +1,66 @@
+// Vertical spacing and font sizes
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+@mixin alpha($line-height: false, $margin: false) {
+    font-size: $baseline__font-size--alpha;
+
+    @if $line-height {
+        line-height: $baseline__line-height--alpha;
+    }
+
+    @if $margin {
+        margin-bottom: $base__spacing;
+    }
+}
+
+@mixin beta($line-height: false, $margin: false) {
+    font-size: $baseline__font-size--beta;
+
+    @if $line-height {
+        line-height: $baseline__line-height--beta;
+    }
+
+    @if $margin {
+        margin-bottom: $base__spacing--half;
+    }
+}
+
+@mixin gamma($line-height: false, $margin: false) {
+    font-size: $baseline__font-size--gamma;
+
+    @if $line-height {
+        line-height: $baseline__line-height--gamma;
+    }
+
+    @if $margin {
+        margin-bottom: $base__spacing--half;
+    }
+}
+
+@mixin delta($line-height: false, $margin: false) {
+    font-size: $baseline__font-size--delta;
+
+    @if $line-height {
+        line-height: $baseline__line-height--delta;
+    }
+
+    @if $margin {
+        margin-bottom: $base__spacing;
+    }
+}
+
+h1 {
+    @include alpha(true, true);
+}
+
+h2 {
+    @include beta(true, true);
+}
+
+h3 {
+    @include gamma(true, true);
+}
+
+p, ul, ol {
+    @include delta(true, true);
+}

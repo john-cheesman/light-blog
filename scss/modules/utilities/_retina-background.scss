@@ -1,0 +1,13 @@
+// Creates media query to load background image
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+@mixin retina-background($file, $type, $width, $height) {
+  background-image: url($file + '-1x.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($file + '-2x.' + $type);
+      -webkit-background-size: $width $height;
+    }
+  }
+}
