@@ -1,10 +1,10 @@
 {% for page in pages %}
-{% if page.date %} <!-- Note we check for Date field (posts) here -->
+{% if page.date %}
 <article class="post">
     <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-    <ul class="post__meta">
-        <li><time datetime="{{ page.date }}">{{ page.date_formatted }}</time></li>
-        <li>by {{ page.author }}</li>
+    <ul class="post-meta">
+        <li class="post-meta__date"><time datetime="{{ page.date }}">{{ page.date_formatted }}</time></li>
+        <li class="post-meta__author">by {{ page.author }}</li>
     </ul>
     <p class="post__excerpt">{{ page.excerpt }}</p>
 </article>
