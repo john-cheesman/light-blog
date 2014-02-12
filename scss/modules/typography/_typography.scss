@@ -1,0 +1,12 @@
+// Font styles
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-family: $header__font;
+    font-weight: 600;
+}
+
+code {
+    font-family: $mono__font;
+}
