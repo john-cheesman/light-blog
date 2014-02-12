@@ -1,0 +1,8 @@
+@mixin bp($point) {
+
+    $bp__column--medium:           "(min-width: 40em)";
+
+    @if $point == column-medium {
+        @media #{$bp__column--medium} { @content; }
+    }
+}

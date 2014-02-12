@@ -50,15 +50,24 @@
 }
 
 h1 {
-    @include alpha(true, true);
+    @include beta(true, true);
+    @include bp(column-medium) {
+        @include alpha(true, true);
+    }
 }
 
 h2 {
-    @include beta(true, true);
+    @include gamma(true, true);
+    @include bp(column-medium) {
+        @include beta(true, true);
+    }
 }
 
 h3 {
-    @include gamma(true, true);
+    @include delta(true, true);
+    @include bp(column-medium) {
+        @include gamma(true, true);
+    }
 }
 
 p, ul, ol {

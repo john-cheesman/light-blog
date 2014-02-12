@@ -381,13 +381,13 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: "Gentium Basic", sans-serif;
-  color: #333333;
+  font-size: 1.4rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #545454;
 }
 
 h1, h2, h3, h4 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Novocento Wide", Arial, Helvetica, sans-serif;
   font-weight: 400;
   margin: 0;
 }
@@ -412,43 +412,67 @@ a {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
+  src: url(//themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot);
+  src: local("Open Sans"), local("OpenSans"), url("//themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot?#iefix") format("embedded-opentype"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
+  src: url(//themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnZ2MAKAc2x4R1uOSeegc5U.eot);
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("//themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnZ2MAKAc2x4R1uOSeegc5U.eot?#iefix") format("embedded-opentype"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
+  src: url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHZ2MAKAc2x4R1uOSeegc5U.eot);
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHZ2MAKAc2x4R1uOSeegc5U.eot) format("embedded-opentype"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.6rem;
   line-height: 4.8rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+@media (min-width: 40em) {
+  h1 {
+    font-size: 6rem;
+    line-height: 7.2rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   line-height: 3.6rem;
   margin-bottom: 1.2rem;
 }
+@media (min-width: 40em) {
+  h2 {
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+    margin-bottom: 1.2rem;
+  }
+}
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   line-height: 2.4rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 40em) {
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-bottom: 1.2rem;
+  }
 }
 
 p, ul, ol {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
 }
