@@ -64,12 +64,14 @@ h2 {
 }
 
 h3 {
-    @include delta(true, true);
+    @include delta(true, false);
     @include bp(column-medium) {
-        @include gamma(true, true);
+        @include gamma(true, false);
     }
 }
 
-p, ul, ol {
+p, ul, ol, table, dl, pre {
+    padding: 0;
+
     @include delta(true, true);
 }

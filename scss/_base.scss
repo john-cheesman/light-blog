@@ -46,19 +46,16 @@ html {
 body {
     font-size: $baseline__font-size--delta;
     font-family: $base__font;
+    background-color: $colour__ground;
     color: $colour__copy;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
+    text-transform: uppercase;
     font-family: $header__font;
-    font-weight: 400;
-    margin: 0;
+    font-weight: 600;
 }
 
-p {
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
+code {
+    font-family: $mono__font;
 }
