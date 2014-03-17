@@ -478,11 +478,23 @@ p, ul, ol, table, dl, pre {
   margin-bottom: 2.4rem;
 }
 
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .post__excerpt {
   border-bottom: solid 1px #e0e0e0;
   border-top: solid 1px #e0e0e0;
   margin-bottom: 2.2rem;
   padding: 1.2rem 0;
+}
+
+.post-single {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .post-meta {
