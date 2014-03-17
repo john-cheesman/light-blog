@@ -22,5 +22,6 @@
 .post-meta--single {
     border-bottom: solid 1px $colour__ui--light;
     border-top: solid 1px $colour__ui--light;
-    margin-bottom: 1.0rem;
+    margin-bottom: $base__spacing;
+    padding: calc(#{$base__spacing--half} - 1px) 0;
 }
