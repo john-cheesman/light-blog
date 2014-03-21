@@ -20,5 +20,19 @@
   "bugs": {
     "url": "https://github.com/john-cheesman/light-blog/issues"
   },
-  "homepage": "https://github.com/john-cheesman/light-blog"
+  "homepage": "https://github.com/john-cheesman/light-blog",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-ruby-sass": "^0.4.0",
+    "gulp-clean": "^0.2.4",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-uglify": "^0.2.1",
+    "gulp-cache": "^0.1.3",
+    "gulp-notify": "^1.2.1",
+    "gulp-jshint": "^1.5.0",
+    "gulp-imagemin": "^0.1.5"
+  }
 }
