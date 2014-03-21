@@ -1,0 +1,24 @@
+{
+  "name": "light-blog",
+  "version": "0.0.0",
+  "description": "A simple responsive blog theme for Pico",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/john-cheesman/light-blog.git"
+  },
+  "keywords": [
+    "pico",
+    "blog",
+    "responsive"
+  ],
+  "author": "John Cheesman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/john-cheesman/light-blog/issues"
+  },
+  "homepage": "https://github.com/john-cheesman/light-blog"
+}
