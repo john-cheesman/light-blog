@@ -10,11 +10,10 @@
     <meta name="robots" content="{{ meta.robots }}">
 {% endif %}
 
-    <link rel="stylesheet" href="{{ theme_url }}/css/style-scss.css" type="text/css" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
-		<link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css' />
 
-    <script src="{{ theme_url }}/scripts/modernizr-2.6.1.min.js"></script>
 </head>
 <body>
 
@@ -28,7 +27,7 @@
     {% else %} <!-- Single page shows individual blog post -->
 	{% if meta.date %}
 
-        {% include 'partials/post-single.html '%}
+        {% include 'partials/post-single.html' %}
 
 	{% else %}
 

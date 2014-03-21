@@ -1,0 +1,27 @@
+// Post meta
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+.post-meta {
+    list-style: none;
+    margin: 0;
+    font-weight: 600;
+
+    li {
+        display: inline-block;
+
+        &:after {
+            content: ' \2022';
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+    }
+}
+
+.post-meta--single {
+    border-bottom: solid 1px $colour__ui--light;
+    border-top: solid 1px $colour__ui--light;
+    margin-bottom: $base__spacing;
+    padding: calc(#{$base__spacing--half} - 1px) 0;
+}

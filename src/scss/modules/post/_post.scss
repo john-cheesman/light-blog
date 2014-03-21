@@ -1,0 +1,15 @@
+// Post
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+.post {
+    max-width: $base__content-width;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.post__excerpt {
+    border-bottom: solid 1px $colour__ui--light;
+    border-top: solid 1px $colour__ui--light;
+    margin-bottom: 2.2rem;
+    padding: 1.2rem 0;
+}
