@@ -9,10 +9,12 @@
 {% endif %}{% if meta.robots %}
     <meta name="robots" content="{{ meta.robots }}">
 {% endif %}
+    <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css' />
+    <!-- Stylesheets -->
+    <link href="{{ theme_url }}/css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' />
+    <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' />
 
 </head>
 <body>
@@ -24,21 +26,22 @@
 
         {% include 'partials/post-list.html' %}
 
-    {% else %} <!-- Single page shows individual blog post -->
-	{% if meta.date %}
+    {% else %}
+        {% if meta.date %} <!-- Single page shows individual blog post or page -->
 
-        {% include 'partials/post-single.html' %}
+            {% include 'partials/post-single.html' %}
 
-	{% else %}
+        {% else %}
 
-        {% include 'partials/page-single.html' %}
+            {% include 'partials/page-single.html' %}
 
-	</article>
-	{% endif %}
+        {% endif %}
     {% endif %}
     </section> <!-- close .content-main -->
 
     {% include 'partials/footer.html' %}
 
+    <!-- Scripts -->
+    <script src="{{ theme_url }}/js/scripts.js"></script>
 </body>
 </html>

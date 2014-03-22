@@ -2,7 +2,9 @@
     {% if meta.title %}<h1>{{ meta.title }}</h1>{% endif %}
     <ul class="post-meta post-meta--single">
         <li class="post-meta__date"><time datetime="{{ meta.date }}">{{ meta.date_formatted }}</time></li>
-        <li class="post-meta__author">by {{ meta.author }}</li>
+        {% if meta.author %}
+            <li class="post-meta__author">by {{ meta.author }}</li>
+        {% endif %}
     </ul>
     {{ content }}
 </article>
