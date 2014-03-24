@@ -4,7 +4,9 @@
             <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
             <ul class="post-meta">
                 <li class="post-meta__date"><time datetime="{{ page.date }}">{{ page.date_formatted }}</time></li>
-                <li class="post-meta__author">by {{ page.author }}</li>
+                {{ if page.author }}
+                    <li class="post-meta__author">by {{ page.author }}</li>
+                {{ endif }}
             </ul>
             <p class="post__excerpt">{{ page.excerpt }}</p>
         </article>
