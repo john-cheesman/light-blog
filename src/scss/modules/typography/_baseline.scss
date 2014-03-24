@@ -75,8 +75,5 @@ h3 {
 }
 
 p, ul, ol, table, dl, pre {
-    padding: 0;
-    margin: 0;
-
     @include delta(true, true);
 }

@@ -382,6 +382,11 @@ table {
   border-spacing: 0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -405,6 +410,10 @@ code {
 
 a {
   text-decoration: none;
+}
+
+ul, ol {
+  margin-left: 2.4rem;
 }
 
 @font-face {
@@ -481,8 +490,6 @@ h3 {
 }
 
 p, ul, ol, table, dl, pre {
-  padding: 0;
-  margin: 0;
   font-size: 1.4rem;
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
