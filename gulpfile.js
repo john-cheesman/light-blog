@@ -39,6 +39,16 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
+// Watch task
+gulp.task('watch', function() {
+
+  // Watch .scss files
+  gulp.watch('src/scss/*.scss', ['styles']);
+
+  // Watch .js files
+  gulp.watch('src/js/**/*.js', ['scripts']);
+});
+
 // Default task
 gulp.task('default', ['clean'], function() {
     gulp.start('styles', 'scripts');
