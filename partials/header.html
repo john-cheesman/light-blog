@@ -10,7 +10,7 @@
             <ul>
                 {% for page in pages %}
                     {% if not page.date %}
-                        <li class="nav-main__item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        <li class="nav-main__item"><a class="nav-main__link" href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

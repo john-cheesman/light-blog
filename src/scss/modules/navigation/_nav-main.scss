@@ -1,0 +1,23 @@
+// Nav main
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+.nav-main {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    z-index: -1;
+    width: 70%;
+
+    @include bp (column-medium) {
+        position: static;
+    }
+}
+
+.nav-main__link {
+    color: $colour__ground;
+}
+
+
+body.menu-open {
+    transform: translateX(70%);
+}
