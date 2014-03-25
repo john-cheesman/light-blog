@@ -1,0 +1,14 @@
+// Branding
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+.branding {
+    text-transform: uppercase;
+    font-family: $header__font;
+    font-weight: 600;
+
+    @include gamma();
+
+    @include bp(column-medium) {
+        @include beta(true, true);
+    }
+}

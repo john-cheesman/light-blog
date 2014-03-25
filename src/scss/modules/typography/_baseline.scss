@@ -55,6 +55,7 @@ h1, h2, h3 {
 
 h1 {
     @include beta(true, true);
+
     @include bp(column-medium) {
         @include alpha(true, true);
     }
@@ -62,6 +63,7 @@ h1 {
 
 h2 {
     @include gamma(true, true);
+
     @include bp(column-medium) {
         @include beta(true, true);
     }
@@ -69,6 +71,7 @@ h2 {
 
 h3 {
     @include delta(true, false);
+
     @include bp(column-medium) {
         @include gamma(true, false);
     }
