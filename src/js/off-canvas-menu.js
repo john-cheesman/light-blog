@@ -1,8 +1,10 @@
 // Off Canvas Menu
-document.addEventListener('click', function(e) {
-    if ( matches.call( e.target, '.js-menu-link') ) {
-        console.log('yo');
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(event) {
+        if ( matches.call( event.target, '.js-menu-link') ) {
+            $('body').classList.toggle('menu-open');
+        }
 
-    e.preventDefault();
-}, false);
+        event.preventDefault();
+    }, false);
+});
