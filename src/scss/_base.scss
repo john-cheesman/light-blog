@@ -36,6 +36,7 @@ $colour__ui--light:                     #e0e0e0;
 $colour__accent:                        #397B91;
 $colour__accent--light:                 lighten($colour__accent, 10%);
 $colour__accent--dark:                  darken($colour__accent, 10%);
+$colour__shadow:                        #222;
 
 // Base styles
 // _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -60,4 +61,10 @@ h1, h2, h3, h4, h5, h6 {
 
 code {
     font-family: $mono__font;
+}
+
+.content-main {
+    max-width: $base__content-width;
+    margin: 0 auto;
+    padding: 0 1.0rem;
 }
