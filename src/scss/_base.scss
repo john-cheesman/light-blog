@@ -33,7 +33,7 @@ $colour__ground:                        #fff;
 $colour__copy:                          #545454;
 $colour__ui:                            #707070;
 $colour__ui--light:                     #e0e0e0;
-$colour__accent:                        #397B91;
+$colour__accent: #cc302c;
 $colour__accent--light:                 lighten($colour__accent, 10%);
 $colour__accent--dark:                  darken($colour__accent, 10%);
 $colour__shadow:                        #222;
@@ -51,6 +51,14 @@ body {
     font-family: $base__font;
     background-color: $colour__ground;
     color: $colour__copy;
+}
+
+a {
+    transition: color 0.3s;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
