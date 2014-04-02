@@ -33,9 +33,9 @@ $colour__ground:                        #fff;
 $colour__copy:                          #545454;
 $colour__ui:                            #707070;
 $colour__ui--light:                     #e0e0e0;
-$colour__accent: #cc302c;
-$colour__accent--light:                 lighten($colour__accent, 10%);
-$colour__accent--dark:                  darken($colour__accent, 10%);
+$colour__accent:                        #ff3d39;
+$colour__accent--light:                 lighten($colour__accent, 20%);
+$colour__accent--dark:                  darken($colour__accent, 20%);
 $colour__shadow:                        #222;
 
 // Base styles
