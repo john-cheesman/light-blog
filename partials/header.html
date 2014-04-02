@@ -7,7 +7,7 @@
         {% endif %}
         <a href="#" class="menu-link js-menu-link">menu</a>
         <nav class="nav-main">
-            <ul>
+            <ul class="nav-main__list">
                 {% for page in pages %}
                     {% if not page.date %}
                         <li class="nav-main__item"><a class="nav-main__link" href="{{ page.url }}">{{ page.title }}</a></li>

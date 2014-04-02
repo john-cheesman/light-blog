@@ -13,6 +13,27 @@
     }
 }
 
+.nav-main__list {
+    @include bp (column-medium) {
+        margin: 0;
+    }
+}
+
+.nav-main__item {
+    @include bp (column-medium) {
+        display: inline-block;
+
+        &:after {
+            content: ' \2022';
+            color: $colour__ground;
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+    }
+}
+
 .nav-main__link {
     color: $colour__ground;
 }
