@@ -12,3 +12,7 @@
         @include beta(true, true);
     }
 }
+
+.branding__link {
+    color: $colour__ground;
+}

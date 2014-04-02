@@ -1,9 +1,9 @@
 <header class="header-main">
     <div class="header-inner">
         {% if is_front_page %}
-            <h1 class="branding"><a href="{{ base_url }}">{{ site_title }}</a></h1>
+            <h1 class="branding"><a class="branding__link" href="{{ base_url }}">{{ site_title }}</a></h1>
         {% else %}
-            <p class="branding"><a href="{{ base_url }}">{{ site_title }}</a></p>
+            <p class="branding"><a class="branding__link" href="{{ base_url }}">{{ site_title }}</a></p>
         {% endif %}
         <a href="#" class="menu-link js-menu-link">menu</a>
         <nav class="nav-main">
