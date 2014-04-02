@@ -410,12 +410,6 @@ a:focus {
   outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-  font-family: "Novocento Wide", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-}
-
 code {
   font-family: Monaco, Consolas, "Courier New", monospace;
 }
@@ -424,6 +418,56 @@ code {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1.0rem;
+}
+
+p, ul, ol, table, dl, pre {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: "Novocento Wide", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+  margin-bottom: 1.2rem;
+}
+@media (min-width: 40em) {
+  h1 {
+    font-size: 6rem;
+    line-height: 7.2rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  margin-bottom: 1.2rem;
+}
+@media (min-width: 40em) {
+  h2 {
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+@media (min-width: 40em) {
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
 }
 
 a {
@@ -466,47 +510,6 @@ ul, ol {
   src: local("Open Sans Bold"), local("OpenSans-Bold"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHZ2MAKAc2x4R1uOSeegc5U.eot) format("embedded-opentype"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
 }
 
-h1, h2, h3 {
-  margin: 0;
-}
-
-h1 {
-  font-size: 3.6rem;
-  line-height: 4.8rem;
-  margin-bottom: 1.2rem;
-}
-@media (min-width: 40em) {
-  h1 {
-    font-size: 6rem;
-    line-height: 7.2rem;
-    margin-bottom: 2.4rem;
-  }
-}
-
-h2 {
-  font-size: 2.4rem;
-  line-height: 3.6rem;
-  margin-bottom: 1.2rem;
-}
-@media (min-width: 40em) {
-  h2 {
-    font-size: 3.6rem;
-    line-height: 4.8rem;
-    margin-bottom: 1.2rem;
-  }
-}
-
-h3 {
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-}
-@media (min-width: 40em) {
-  h3 {
-    font-size: 2.4rem;
-    line-height: 3.6rem;
-  }
-}
-
 p, ul, ol, table, dl, pre {
   font-size: 1.4rem;
   line-height: 2.4rem;
@@ -517,6 +520,7 @@ p, ul, ol, table, dl, pre {
   text-transform: uppercase;
   font-family: "Novocento Wide", Arial, Helvetica, sans-serif;
   font-weight: 600;
+  line-height: 3.6rem;
   font-size: 2.4rem;
 }
 @media (min-width: 40em) {
@@ -533,6 +537,7 @@ p, ul, ol, table, dl, pre {
 
 .header-main {
   background-color: #545454;
+  padding: 1.2rem;
 }
 
 .nav-main {
@@ -576,6 +581,12 @@ body.menu-open {
   border-top: solid 1px #e0e0e0;
   margin-bottom: 2.2rem;
   padding: 1.2rem 0;
+}
+
+.post__title {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  margin: 0;
 }
 
 .post__link {

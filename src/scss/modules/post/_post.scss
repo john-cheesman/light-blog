@@ -8,6 +8,11 @@
     padding: 1.2rem 0;
 }
 
+.post__title {
+    @include gamma(true, false);
+    margin: 0;
+}
+
 .post__link {
     color: $colour__accent;
     transition: color 0.3s;

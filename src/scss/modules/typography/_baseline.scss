@@ -49,34 +49,6 @@
     }
 }
 
-h1, h2, h3 {
-    margin: 0;
-}
-
-h1 {
-    @include beta(true, true);
-
-    @include bp(column-medium) {
-        @include alpha(true, true);
-    }
-}
-
-h2 {
-    @include gamma(true, true);
-
-    @include bp(column-medium) {
-        @include beta(true, true);
-    }
-}
-
-h3 {
-    @include delta(true, false);
-
-    @include bp(column-medium) {
-        @include gamma(true, false);
-    }
-}
-
 p, ul, ol, table, dl, pre {
     @include delta(true, true);
 }

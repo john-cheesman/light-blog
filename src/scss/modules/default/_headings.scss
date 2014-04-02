@@ -1,2 +1,38 @@
 // Headings
 // _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+// Import baseline
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+@import '../typography/baseline';
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: $header__font;
+    font-weight: 600;
+    margin: 0;
+}
+
+h1 {
+    @include beta(true, true);
+
+    @include bp(column-medium) {
+        @include alpha(true, true);
+    }
+}
+
+h2 {
+    @include gamma(true, true);
+
+    @include bp(column-medium) {
+        @include beta(true, true);
+    }
+}
+
+h3 {
+    @include delta(true, false);
+
+    @include bp(column-medium) {
+        @include gamma(true, false);
+    }
+}

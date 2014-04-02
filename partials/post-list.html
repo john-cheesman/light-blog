@@ -1,7 +1,7 @@
 {% for page in pages %}
     {% if page.date %}
         <article class="post">
-            <h3><a class="post__link" href="{{ page.url }}">{{ page.title }}</a></h3>
+            <h2 class="post__title"><a class="post__link" href="{{ page.url }}">{{ page.title }}</a></h2>
             <ul class="post-meta">
                 <li class="post-meta__date"><time datetime="{{ page.date }}">{{ page.date_formatted }}</time></li>
                 {% if page.author %}
