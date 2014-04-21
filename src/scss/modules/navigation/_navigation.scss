@@ -1,25 +1,29 @@
-// Nav main
+// Navigation
 // _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-.nav-main {
+.navigation {
     position: absolute;
-    right: 100%;
+    left: 0;
     top: 0;
     z-index: -1;
-    width: 80%;
+    width: 280px;
+
+    &.menu-open {
+        transform: translateX(-280px);
+    }
 
     @include bp (column-medium) {
         position: static;
     }
 }
 
-.nav-main__list {
+.navigation__list {
     @include bp (column-medium) {
         margin: 0;
     }
 }
 
-.nav-main__item {
+.navigation__item {
     @include bp (column-medium) {
         display: inline-block;
 
@@ -34,20 +38,10 @@
     }
 }
 
-.nav-main__link {
+.navigation__link {
     color: $colour__ground;
 }
 
-
-body {
-    transition: transform 0.3s;
-
-    &.menu-open {
-        transform: translateX(80%);
-        box-shadow: -3px 0 3px $colour__shadow;
-
-        @include bp(column-medium) {
-            transform: none;
-        }
-    }
+.wrapper.menu-open {
+    transform: translateX(280px);
 }

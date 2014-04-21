@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js"><!--<![endif]-->
 <head>
     <meta charset="utf-8" />
 
@@ -11,6 +16,21 @@
 {% endif %}
     <meta name="viewport" content="width=device-width" />
 
+<!--[if IE 9 ]>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+        document.createElement('time');
+        document.createElement('figure');
+        document.createElement('figcaption');
+        document.createElement('canvas');
+    </script>
+<![endif]-->
+
     <!-- Stylesheets -->
     <link href="{{ theme_url }}/css/style.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' />
@@ -19,29 +39,36 @@
 </head>
 <body>
 
-    {% include 'partials/header.html' %}
+    <div class="wrapper js-wrapper">
 
-    <section class="content-main">
-    {% if is_front_page %} <!-- Front page lists all blog posts -->
+        {% include 'partials/header.html' %}
 
-        {% include 'partials/post-list.html' %}
+        {% include 'partials/navigation.html' %}
 
-    {% else %}
-        {% if meta.date %} <!-- Single page shows individual blog post or page -->
+        <section class="content-main">
+        {% if is_front_page %} <!-- Front page lists all blog posts -->
 
-            {% include 'partials/post-single.html' %}
+            {% include 'partials/post-list.html' %}
 
         {% else %}
+            {% if meta.date %} <!-- Single page shows individual blog post or page -->
 
-            {% include 'partials/page-single.html' %}
+                {% include 'partials/post-single.html' %}
 
+            {% else %}
+
+                {% include 'partials/page-single.html' %}
+
+            {% endif %}
         {% endif %}
-    {% endif %}
-    </section> <!-- close .content-main -->
+        </section> <!-- close .content-main -->
 
-    {% include 'partials/footer.html' %}
+        {% include 'partials/footer.html' %}
+
+    </div> <!-- close .wrapper -->
 
     <!-- Scripts -->
     <script src="{{ theme_url }}/js/scripts.js"></script>
+
 </body>
 </html>

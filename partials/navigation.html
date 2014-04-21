@@ -1,0 +1,9 @@
+<nav class="navigation js-navigation">
+    <ul class="navigation__list">
+        {% for page in pages %}
+        {% if not page.date %}
+        <li class="navigation__item"><a class="navigation__link" href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

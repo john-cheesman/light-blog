@@ -18,7 +18,8 @@ $base__content-width:                   800px;
 $baseline__font-size--alpha:            6.0rem;
 $baseline__font-size--beta:             3.6rem;
 $baseline__font-size--gamma:            2.4rem;
-$baseline__font-size--delta:            1.4rem;
+$baseline__font-size--delta:            1.6rem;
+$baseline__font-size--epsilon:          1.4rem;
 
 // Line heights
 
@@ -26,6 +27,7 @@ $baseline__line-height--alpha:          7.2rem;
 $baseline__line-height--beta:           4.8rem;
 $baseline__line-height--gamma:          3.6rem;
 $baseline__line-height--delta:          2.4rem;
+$baseline__line-height--epsilon:          2.4rem;
 
 // Colours
 
@@ -43,14 +45,13 @@ $colour__shadow:                        #222;
 
 html {
     font-size: 62.5%;
-    background-color: $colour__copy;
 }
 
 body {
-    font-size: $baseline__font-size--delta;
     font-family: $base__font;
-    background-color: $colour__ground;
+    background-color: $colour__ui;
     color: $colour__copy;
+    overflow-x: hidden;
 }
 
 a {
@@ -63,6 +64,10 @@ a {
 
 code {
     font-family: $mono__font;
+}
+
+.wrapper {
+    background-color: $colour__ground;
 }
 
 .content-main {

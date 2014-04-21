@@ -392,14 +392,13 @@ table {
 
 html {
   font-size: 62.5%;
-  background-color: #545454;
 }
 
 body {
-  font-size: 1.4rem;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  background-color: white;
+  background-color: #707070;
   color: #545454;
+  overflow-x: hidden;
 }
 
 a {
@@ -414,15 +413,28 @@ code {
   font-family: Monaco, Consolas, "Courier New", monospace;
 }
 
+.wrapper {
+  background-color: white;
+}
+
 .content-main {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1.0rem;
 }
 
-p, ul, ol, table, dl, pre {
+body {
   font-size: 1.4rem;
   line-height: 2.4rem;
+}
+@media (min-width: 40em) {
+  body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+
+p, ul, ol, table, dl, pre {
   margin-bottom: 2.4rem;
 }
 
@@ -460,7 +472,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 2.4rem;
 }
 @media (min-width: 40em) {
@@ -510,9 +522,18 @@ ul, ol {
   src: local("Open Sans Bold"), local("OpenSans-Bold"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHZ2MAKAc2x4R1uOSeegc5U.eot) format("embedded-opentype"), url(//themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
 }
 
-p, ul, ol, table, dl, pre {
+body {
   font-size: 1.4rem;
   line-height: 2.4rem;
+}
+@media (min-width: 40em) {
+  body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+
+p, ul, ol, table, dl, pre {
   margin-bottom: 2.4rem;
 }
 
@@ -535,65 +556,57 @@ p, ul, ol, table, dl, pre {
   color: white;
 }
 
-.header-main {
+.header {
   background-color: #545454;
   padding: 1.2rem;
   margin-bottom: 2.4rem;
 }
 
-.nav-main {
+.navigation {
   position: absolute;
-  right: 100%;
+  left: 0;
   top: 0;
   z-index: -1;
-  width: 80%;
+  width: 280px;
+}
+.navigation.menu-open {
+  -webkit-transform: translateX(-280px);
+  -ms-transform: translateX(-280px);
+  transform: translateX(-280px);
 }
 @media (min-width: 40em) {
-  .nav-main {
+  .navigation {
     position: static;
   }
 }
 
 @media (min-width: 40em) {
-  .nav-main__list {
+  .navigation__list {
     margin: 0;
   }
 }
 
 @media (min-width: 40em) {
-  .nav-main__item {
+  .navigation__item {
     display: inline-block;
   }
-  .nav-main__item:after {
+  .navigation__item:after {
     content: ' \2022';
     color: white;
   }
-  .nav-main__item:last-child:after {
+  .navigation__item:last-child:after {
     content: '';
   }
 }
 
-.nav-main__link {
+.navigation__link {
   color: white;
 }
 
-body {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-}
-body.menu-open {
-  -webkit-transform: translateX(80%);
-  -ms-transform: translateX(80%);
-  transform: translateX(80%);
-  -webkit-box-shadow: -3px 0 3px #222222;
-  box-shadow: -3px 0 3px #222222;
-}
-@media (min-width: 40em) {
-  body.menu-open {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
+.wrapper.menu-open {
+  -webkit-transform: translateX(280px);
+  -ms-transform: translateX(280px);
+  transform: translateX(280px);
 }
 
 @media (min-width: 40em) {
@@ -610,8 +623,6 @@ body.menu-open {
 }
 
 .post__title {
-  font-size: 2.4rem;
-  line-height: 3.6rem;
   margin: 0;
 }
 

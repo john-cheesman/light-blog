@@ -1,4 +1,4 @@
-// classList polyfill
+// classList Polyfill
 // https://github.com/remy/polyfills/blob/master/classList.js
 // copyright 2014 Remy Sharp
 (function () {
@@ -18,7 +18,7 @@
         for (var i = 0; i < classes.length; i++) {
             push.call(this, classes[i]);
         }
-    };
+    }
 
     DOMTokenList.prototype = {
         add: function(token) {

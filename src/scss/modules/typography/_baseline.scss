@@ -49,6 +49,26 @@
     }
 }
 
+@mixin  epsilon($line-height: false, $margin: false) {
+    font-size: $baseline__font-size--epsilon;
+
+    @if $line-height {
+        line-height: $baseline__line-height--epsilon;
+    }
+
+    @if $margin {
+        margin-bottom: $base__spacing;
+    }
+}
+
+body {
+    @include epsilon(true, false);
+
+    @include bp(column-medium) {
+        @include delta(true, false);
+    }
+}
+
 p, ul, ol, table, dl, pre {
-    @include delta(true, true);
+    margin-bottom: $base__spacing;
 }

@@ -5,4 +5,4 @@ var $ = function(el) {
 
 var $$ = function(el) {
     return document.querySelectorAll(el);
-}
+};
