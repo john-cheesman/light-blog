@@ -567,16 +567,22 @@ p, ul, ol, table, dl, pre {
   left: 0;
   top: 0;
   z-index: -1;
-  width: 280px;
+  width: 28rem;
 }
 .navigation.menu-open {
-  -webkit-transform: translateX(-280px);
-  -ms-transform: translateX(-280px);
-  transform: translateX(-280px);
+  -webkit-transform: translateX(-28rem);
+  -ms-transform: translateX(-28rem);
+  transform: translateX(-28rem);
 }
 @media (min-width: 40em) {
   .navigation {
     position: static;
+    background-color: #545454;
+  }
+  .navigation.menu-open {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 }
 
@@ -604,9 +610,16 @@ p, ul, ol, table, dl, pre {
 }
 
 .wrapper.menu-open {
-  -webkit-transform: translateX(280px);
-  -ms-transform: translateX(280px);
-  transform: translateX(280px);
+  -webkit-transform: translateX(28rem);
+  -ms-transform: translateX(28rem);
+  transform: translateX(28rem);
+}
+@media (min-width: 40em) {
+  .wrapper.menu-open {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
 }
 
 @media (min-width: 40em) {

@@ -6,14 +6,19 @@
     left: 0;
     top: 0;
     z-index: -1;
-    width: 280px;
+    width: 28rem;
 
     &.menu-open {
-        transform: translateX(-280px);
+        transform: translateX(-28rem);
     }
 
     @include bp (column-medium) {
         position: static;
+        background-color: $colour__copy;
+
+        &.menu-open {
+            transform: none;
+        }
     }
 }
 
@@ -43,5 +48,9 @@
 }
 
 .wrapper.menu-open {
-    transform: translateX(280px);
+    transform: translateX(28rem);
+
+    @include bp (column-medium) {
+        transform: none;
+    }
 }
