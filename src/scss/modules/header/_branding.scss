@@ -6,11 +6,12 @@
     font-family: $header__font;
     font-weight: 600;
     line-height: 3.6rem;
+    margin-bottom: 0;
 
     @include gamma();
 
     @include bp(column-medium) {
-        @include beta(true, true);
+        @include beta(true, false);
     }
 }
 

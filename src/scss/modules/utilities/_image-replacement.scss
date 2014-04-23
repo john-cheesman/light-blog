@@ -1,0 +1,8 @@
+// Adapted from H5BP method image replacement
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+@mixin image-replacement {
+    border: 0;
+    text-shadow: none;
+    color: transparent;
+}

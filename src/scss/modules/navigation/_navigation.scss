@@ -15,6 +15,9 @@
     @include bp (column-medium) {
         position: static;
         background-color: $colour__copy;
+        width: auto;
+        margin-bottom: $base__spacing;
+        padding: 0 $base__spacing--half $base__spacing--half;
 
         &.menu-open {
             transform: none;
