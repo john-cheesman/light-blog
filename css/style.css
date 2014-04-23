@@ -624,12 +624,6 @@ p, ul, ol, table, dl, pre {
   }
 }
 
-.menu-link {
-  background: url("/themes/light-blog/images/menu-icon.svg") no-repeat;
-  border: 0;
-  text-shadow: none;
-  color: transparent;
-}
 @media (min-width: 40em) {
   .menu-link {
     display: none;
@@ -637,7 +631,10 @@ p, ul, ol, table, dl, pre {
 }
 
 .no-svg .menu-link {
-  background-image: url("/themes/light-blog/images/menu-icon.png");
+  background: url("/themes/light-blog/images/menu-icon.png") no-repeat;
+  border: 0;
+  text-shadow: none;
+  color: transparent;
 }
 
 .post__excerpt {

@@ -3,15 +3,13 @@
 
 
 .menu-link {
-    background: url('/themes/light-blog/images/menu-icon.svg') no-repeat;
-
-    @include image-replacement();
-
     @include bp (column-medium) {
         display: none;
     }
 }
 
 .no-svg .menu-link {
-    background-image: url('/themes/light-blog/images/menu-icon.png');
+    background: url('/themes/light-blog/images/menu-icon.png') no-repeat;
+
+    @include image-replacement();
 }
