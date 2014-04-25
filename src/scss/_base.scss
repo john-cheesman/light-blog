@@ -68,6 +68,7 @@ code {
 
 .wrapper {
     background-color: $colour__ground;
+    transition: transform 0.3s;
 }
 
 .content-main {

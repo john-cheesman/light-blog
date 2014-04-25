@@ -415,6 +415,8 @@ code {
 
 .wrapper {
   background-color: white;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
 }
 
 .content-main {
@@ -560,7 +562,7 @@ p, ul, ol, table, dl, pre {
 
 .header {
   background-color: #545454;
-  padding: 1.2rem;
+  padding: 1.2rem 1.2rem 1.2rem 2.4rem;
   position: relative;
 }
 @media (min-width: 40em) {
@@ -633,14 +635,17 @@ p, ul, ol, table, dl, pre {
 }
 
 .menu-link {
+  background: url("/themes/light-blog/images/menu-icon.svg") 50% 50% no-repeat;
   position: absolute;
-  left: -1.0rem;
+  left: -2.0rem;
   top: 50%;
-  height: 2.6rem;
-  width: 2.6rem;
-  margin-top: -1.4rem;
+  height: 4.0rem;
+  width: 4.0rem;
+  margin-top: -2.1rem;
   background-color: #545454;
-  padding: 0.1rem 0 0.4rem 0.4rem;
+  border: 0;
+  text-shadow: none;
+  color: transparent;
 }
 @media (min-width: 40em) {
   .menu-link {
@@ -650,9 +655,6 @@ p, ul, ol, table, dl, pre {
 
 .no-svg .menu-link {
   background: url("/themes/light-blog/images/menu-icon.png") no-repeat;
-  border: 0;
-  text-shadow: none;
-  color: transparent;
 }
 
 .post__excerpt {

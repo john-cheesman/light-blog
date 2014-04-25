@@ -3,14 +3,16 @@
 
 
 .menu-link {
+    background: url('/themes/light-blog/images/menu-icon.svg') 50% 50% no-repeat;
     position: absolute;
-    left: -1.0rem;
+    left: -2.0rem;
     top: 50%;
-    height: 2.6rem;
-    width: 2.6rem;
-    margin-top: -1.4rem;
+    height: 4.0rem;
+    width: 4.0rem;
+    margin-top: -2.1rem;
     background-color: $colour__copy;
-    padding: 0.1rem 0 0.4rem 0.4rem;
+
+    @include image-replacement();
 
     @include bp (column-medium) {
         display: none;
@@ -19,6 +21,4 @@
 
 .no-svg .menu-link {
     background: url('/themes/light-blog/images/menu-icon.png') no-repeat;
-
-    @include image-replacement();
 }

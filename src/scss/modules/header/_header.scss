@@ -3,7 +3,7 @@
 
 .header {
     background-color: $colour__copy;
-    padding: $base__spacing--half;
+    padding: $base__spacing--half $base__spacing--half $base__spacing--half $base__spacing;
     position: relative;
 
     @include bp (column-medium) {
