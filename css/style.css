@@ -564,10 +564,12 @@ p, ul, ol, table, dl, pre {
   background-color: #545454;
   padding: 1.2rem 1.2rem 1.2rem 2.4rem;
   position: relative;
+  margin-bottom: 2.4rem;
 }
 @media (min-width: 40em) {
   .header {
     padding: 1.2rem 1.2rem 0;
+    margin-bottom: 0;
   }
 }
 

@@ -5,8 +5,10 @@
     background-color: $colour__copy;
     padding: $base__spacing--half $base__spacing--half $base__spacing--half $base__spacing;
     position: relative;
+    margin-bottom: $base__spacing;
 
     @include bp (column-medium) {
         padding: $base__spacing--half $base__spacing--half 0;
+        margin-bottom: 0;
     }
 }
