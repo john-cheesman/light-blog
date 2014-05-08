@@ -1,9 +1,7 @@
 // Menu link
 // _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-
 .menu-link {
-    background: url('/themes/light-blog/images/menu-icon.svg') 50% 50% no-repeat;
     position: absolute;
     left: -2.0rem;
     top: 50%;
@@ -11,8 +9,7 @@
     width: 4.0rem;
     margin-top: -2.1rem;
     background-color: $colour__copy;
-
-    @include image-replacement();
+    padding: 0.8rem 0.9rem;
 
     @include bp (column-medium) {
         display: none;
@@ -20,5 +17,13 @@
 }
 
 .no-svg .menu-link {
-    background: url('/themes/light-blog/images/menu-icon.png') no-repeat;
+    background-image: url('/themes/light-blog/images/menu-icon.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @include image-replacement();
+}
+
+.menu-link__icon path {
+    fill: $colour__ground;
 }
