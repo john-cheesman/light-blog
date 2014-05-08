@@ -4,12 +4,12 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache');
+    runsequence = require('run-sequence');
 
 // Styles task
 gulp.task('styles', function() {
@@ -17,7 +17,7 @@ gulp.task('styles', function() {
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(rename('style.css'))
-        //.pipe(minifycss())
+        .pipe(minifycss())
         .pipe(gulp.dest('css'))
         .pipe(notify({ message: 'Styles task complete' }));
 });
@@ -41,15 +41,15 @@ gulp.task('clean', function() {
 
 // Watch task
 gulp.task('watch', function() {
+    gulp.watch('src/scss/**/*.scss', ['styles']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
+});
 
-  // Watch .scss files
-  gulp.watch('src/scss/**/*.scss', ['styles']);
-
-  // Watch .js files
-  gulp.watch('src/js/**/*.js', ['scripts']);
+// Build task
+gulp.task('build', [], function() {
+    runsequence('clean', ['scripts', 'styles']);
 });
 
 // Default task
-gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts');
-});
+gulp.task('default', ['build', 'watch'], function(){});
+
